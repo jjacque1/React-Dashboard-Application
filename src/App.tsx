@@ -10,8 +10,8 @@ import { TaskFilter } from "./components/TaskFilter/TaskFilter";
 const initialTasks: Task[] = [
   {
     id: "4",
-    title: "Make Stupid Moneysss",
-    description: "Slowly work my way up the tech space.",
+    title: "Graduate",
+    description: "Pass all my assignments and Skill based accessments.",
     status: "pending",
     priority: "low",
     dueDate: "2026-12-30",
@@ -109,16 +109,16 @@ function App() {
   return (
     <div>
       <h1>Task Manager </h1>
-
-      <TaskForm onAddTask={handleAddTask} />
-
       <TaskFilter onFilterChange={handleFilterChange} />
-
-      <TaskList
+      <TaskForm onAddTask={handleAddTask} />
+        <div className="container"> 
+          <TaskList
         tasks={filteredTasks}
         onStatusChange={handleStatusChange}
         onDelete={handleDelete}
-      />
+      /> 
+        </div>
+      
     </div>
   );
 }

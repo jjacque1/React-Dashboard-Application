@@ -11,7 +11,7 @@ export function TaskList({
   }
 
   return (
-    <ul>
+    <ul className="task-row">
       {tasks.map((task) => (
         <TaskItem
           key={task.id}
