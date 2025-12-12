@@ -25,9 +25,9 @@ export function TaskItem({ task, onStatusChange, onDelete }: TaskItemProps) {
   }
 
   return (
-    <li>
+    <li className="task-wrapper ">
       <h3>{task.title}</h3>
-      <p>{task.description}</p>
+      <h4>{task.description}</h4>
       <p>Status: {task.status}</p>
       <p>Priority: {task.priority}</p>
       <p>Due: {task.dueDate}</p>

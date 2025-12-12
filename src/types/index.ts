@@ -5,14 +5,16 @@ export type TaskStatus = "pending" | "in-progress" | "completed";
 export type TaskPriority = "low" | "medium" | "high";
 
 // Main Task shape
+
 export interface Task {
   id: string;
   title: string;
   description: string;
   status: TaskStatus;
-  priority: TaskPriority;
+  priority: "low" | "medium" | "high";
   dueDate: string;
 }
+
 
 // Props for TaskList
 export interface TaskListProps {
@@ -34,4 +36,18 @@ export interface TaskFilterProps {
     status?: TaskStatus;
     priority?: TaskPriority;
   }) => void;
+}
+
+// New type: what data the form sends *up* to App/Dashboard
+export interface NewTaskData {
+  title: string;
+  description: string;
+  status: TaskStatus;
+  priority: "low" | "medium" | "high";
+  dueDate: string;
+}
+
+// Props for TaskForm
+export interface TaskFormProps {
+  onAddTask: (newTask: NewTaskData) => void;
 }

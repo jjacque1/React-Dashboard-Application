@@ -97,7 +97,7 @@ function App() {
 
   return (
     <div>
-      <h1>Task Manager (Lab 3 Core)</h1>
+      <h1>Task Manager </h1>
 
       <TaskFilter onFilterChange={handleFilterChange} />
 
