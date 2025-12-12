@@ -4,7 +4,7 @@ Task Manager Dashboard (React + TypeScript)
 
 # My Solution Screeshot:
 
-![alt text](taskManagerScreenShot.png)
+![alt text](TaskManagement.png)
 
 # How to Use:
 
