@@ -127,16 +127,15 @@ export function TaskForm({ onAddTask }: TaskFormProps) {
       </div>
 
       <div>
-        <label>
-          Due date:
-          <input
-            type="text"
-            placeholder="YYYY-MM-DD"
-            value={formValues.dueDate}
-            onChange={handleDueDateChange}
-          />
-        </label>
-      </div>
+  <label>
+    Due date:
+    <input
+      type="date"
+      value={formValues.dueDate}
+      onChange={handleDueDateChange}
+    />
+  </label>
+</div>
 
       <button type="submit">Add Task</button>
     </form>
