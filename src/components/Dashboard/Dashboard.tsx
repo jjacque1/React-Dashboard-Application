@@ -87,6 +87,9 @@ export function Dashboard() {
       <h1>Task Manager Dashboard</h1>
 
       <TaskForm onAddTask={handleAddTask} />
+      
+
+      <h1>My Tasks</h1>
       <TaskFilter onFilterChange={handleFilterChange} />
       <TaskList
         tasks={filteredTasks}
