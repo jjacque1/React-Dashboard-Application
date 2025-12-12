@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { NewTaskData, TaskFormProps, TaskStatus, TaskPriority } from "../../types";
 
 export function TaskForm({ onAddTask }: TaskFormProps) {
-  const [formValues, setFormValues] = useState<TaskFormValues>({
+  const [formValues, setFormValues] = useState<NewTaskData>({
     title: "",
     description: "",
     status: "pending",     // default
@@ -60,7 +60,7 @@ export function TaskForm({ onAddTask }: TaskFormProps) {
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
 
-    // Very simple guard for now – we can add real validation later
+    
     if (!formValues.title.trim()) {
       return;
     }
@@ -129,7 +129,6 @@ export function TaskForm({ onAddTask }: TaskFormProps) {
       <div>
         <label>
           Due date:
-          {/* we can change this to type="date" later if you want */}
           <input
             type="text"
             placeholder="YYYY-MM-DD"

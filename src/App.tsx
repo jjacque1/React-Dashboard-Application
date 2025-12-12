@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState } from "react";
+import { TaskForm } from "./components/TaskForm/TAskForm";
+import type { NewTaskData } from "./types";
 
 import type { Task, TaskStatus, TaskPriority } from "./types";
 import { TaskList } from "./components/TaskList/TaskList";
@@ -48,6 +50,15 @@ function App() {
   const [priorityFilter, setPriorityFilter] = useState<
     TaskPriority | undefined
   >(undefined);
+
+  function handleAddTask(newTaskData: NewTaskData): void {
+    const newTask: Task = {
+      id: (tasks.length + 1).toString(),
+      ...newTaskData,
+    };
+
+    setTasks((prevTasks) => [newTask, ...prevTasks]);
+  }
 
   // Update a task's status
   function handleStatusChange(taskId: string, newStatus: TaskStatus): void {
@@ -98,6 +109,8 @@ function App() {
   return (
     <div>
       <h1>Task Manager </h1>
+
+      <TaskForm onAddTask={handleAddTask} />
 
       <TaskFilter onFilterChange={handleFilterChange} />
 
