@@ -1,35 +1,20 @@
 import { useState } from "react";
 
 import type { Task, TaskStatus, TaskPriority, NewTaskData } from "../../types";
-import { TaskForm } from "../TaskForm/TAskForm";
+import { TaskForm } from "../TaskForm/TaskForm";
 import { TaskFilter } from "../TaskFilter/TaskFilter";
 import { TaskList } from "../TaskList/TaskList";
 
 const initialTasks: Task[] = [
   {
     id: "1",
-    title: "Study React",
-    description: "Complete Lesson 6 and Lesson 7 labs.",
-    status: "in-progress",
-    priority: "high",
-    dueDate: "2025-12-20",
-  },
-  {
-    id: "2",
-    title: "Apply for jobs",
-    description: "Search and apply for at least 3 new positions.",
-    status: "pending",
-    priority: "medium",
-    dueDate: "2025-12-22",
-  },
-  {
-    id: "3",
-    title: "Finish Assignment",
-    description: "Work on the Task Manager lab.",
+    title: "Sample Task",
+    description: "Task Details ",
     status: "completed",
     priority: "high",
-    dueDate: "2025-12-10",
-  },
+    dueDate: "2025-12-25",
+  }
+ 
 ];
 
 export function Dashboard() {
